@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kanuntek"
+version = "1.0.0"
+description = "A professional, citation-backed Turkish Legal RAG assistant."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "langchain",
+    "langchain-community",
+    "langchain-huggingface",
+    "faiss-cpu",
+    "sentence-transformers",
+    "llama-cpp-python",
+    "pypdf",
+    "huggingface_hub",
+    "tqdm"
+]
+
+[project.scripts]
+kanuntek-server = "scripts.api_server:main"
+kanuntek-setup = "scripts.setup_assets:setup_kanuntek_assets"

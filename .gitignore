@@ -1,0 +1,19 @@
+# Large assets
+models/*
+data/
+!models/.gitkeep
+
+# Project session and internal logs
+my-session.json
+__pycache__/
+*.tmp
+.env
+.venv/
+node_modules/
+
+# Exclude documentation (Keep only README for GitHub)
+PROJECT_STATUS.md
+TRAINING_GUIDE.md
+AI_TRAINING_PLAN.md
+TIMELINE.md
+GEMINI.md
