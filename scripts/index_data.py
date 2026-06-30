@@ -1,6 +1,11 @@
 import json
 import os
+import sys
 import torch
+
+# Sync PYTHONPATH so imports work correctly when running script directly
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from tqdm import tqdm
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS

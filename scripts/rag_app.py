@@ -1,6 +1,9 @@
 import os
 import sys
 import torch
+
+# Sync PYTHONPATH so imports work correctly when running script directly
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from collections import deque
 
 # 1. ROBUST IMPORTS

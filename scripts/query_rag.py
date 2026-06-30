@@ -1,4 +1,9 @@
 import os
+import sys
+
+# Sync PYTHONPATH so imports work correctly when running script directly
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from src.utils import clean_turkish_text, prepare_e5_input

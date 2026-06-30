@@ -1,5 +1,10 @@
 import os
+import sys
 import json
+
+# Sync PYTHONPATH so imports work correctly when running script directly
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import numpy as np
 from sentence_transformers import SentenceTransformer
 from langchain_community.vectorstores import FAISS
